@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: $blue-dark;
+}
+
+button {
+	border: 0;
+	background: $green-med;
+	color: $white;
+	padding: 5px 20px;
+	font-size: 1.2em;
+	border-radius: 4px;
+	cursor: pointer;
+	&:hover {
+		background: lighten($green-med, 5%);
+	}
+	&[disabled] {
+		background: $gray-med;
+		background: rgba($green-med, 0.2);
+	}
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}

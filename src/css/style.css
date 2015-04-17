@@ -1,0 +1,12 @@
+html, body {
+	margin: 0;
+}
+
+body {
+	background: #fff;
+	font: 16px/1.4em Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+	margin: 20px;
+}

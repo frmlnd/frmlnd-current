@@ -1,0 +1,40 @@
+@import 'settings';
+
+html, body {
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: $blue-med;
+	font: $base-font-weight #{$base-font-size}/#{$base-line-height} $default-font;
+}
+
+.page {
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	h1 {
+		margin: 100px 0 0;
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 1;
+		text-align: center;
+		a {
+			color: $green-med;
+		}
+	}
+	h2 {
+		font-weight: 500;
+	}
+	p {
+		.cite {
+			font-size: .8em;
+		}
+	}
+
+}

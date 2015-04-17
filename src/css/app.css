@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700);
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #253840;
+}
+
+button {
+  border: 0;
+  background: #267F26;
+  color: #fff;
+  padding: 5px 20px;
+  font-size: 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background: #2c932c;
+}
+button[disabled] {
+  background: #999;
+  background: rgba(38, 127, 38, 0.2);
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #b7eaff 0%, #94dfff 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #4A6F7F;
+  font: 400 16px/1.5 "Source Code Pro", Arial, Helvetica, sans-serif;
+}
+
+.page {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.page h1 {
+  margin: 100px 0 0;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+.page h1 a {
+  color: #267F26;
+}
+.page h2 {
+  font-weight: 500;
+}
+.page p .cite {
+  font-size: .8em;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,14 @@
+{
+  "name": "frmlnd-current",
+  "version": "0.1.0",
+  "homepage": "https://github.com/frmlnd/frmlnd-current",
+  "authors": [
+    "Adam Penly <apenly@gmail.com>"
+  ],
+  "description": "A tiny jQuery plugin that shows currency conversions on hover.",
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "1.11.2",
+    "modernizr": "~2.8.3"
+  }
+}
