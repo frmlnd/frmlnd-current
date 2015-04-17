@@ -5,7 +5,7 @@
 
 a {
   text-decoration: none;
-  color: #253840;
+  color: #fff;
 }
 
 button {
@@ -35,10 +35,10 @@ html, body {
 
 body {
   margin: 0;
-  background: linear-gradient(to bottom, #b7eaff 0%, #94dfff 100%);
+  background-color: #267F26;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #4A6F7F;
+  color: #fff;
   font: 400 16px/1.5 "Source Code Pro", Arial, Helvetica, sans-serif;
 }
 
@@ -56,10 +56,13 @@ body {
   text-align: center;
 }
 .page h1 a {
-  color: #267F26;
+  color: #fff;
 }
 .page h2 {
   font-weight: 500;
+}
+.page h2 a {
+  border-bottom: 1px dotted #fff;
 }
 .page p .cite {
   font-size: .8em;

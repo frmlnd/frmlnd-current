@@ -6,10 +6,10 @@ html, body {
 
 body {
 	margin: 0;
-	background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%);
+	background-color: $green-med;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	color: $blue-med;
+	color: $white;
 	font: $base-font-weight #{$base-font-size}/#{$base-line-height} $default-font;
 }
 
@@ -25,11 +25,14 @@ body {
 		line-height: 1;
 		text-align: center;
 		a {
-			color: $green-med;
+			color: $white;
 		}
 	}
 	h2 {
 		font-weight: 500;
+		a {
+			border-bottom: 1px dotted #fff;
+		}
 	}
 	p {
 		.cite {
