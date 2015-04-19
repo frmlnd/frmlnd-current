@@ -33,7 +33,7 @@ body {
 		font-weight: 500;
 		margin-bottom: 2em;
 		a {
-			border-bottom: 1px dotted #fff;
+			border-bottom: 1px dotted $white;
 		}
 	}
 	p {
@@ -42,6 +42,12 @@ body {
 		.cite {
 			font-size: .8em;
 		}
+	}
+	hr {
+		border: 0;
+		border-top: 1px solid $white;
+		width: 40%;
+		margin: 0 auto;
 	}
 }
 

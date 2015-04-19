@@ -105,6 +105,12 @@ body {
 .page p .cite {
   font-size: .8em;
 }
+.page hr {
+  border: 0;
+  border-top: 1px solid #fff;
+  width: 40%;
+  margin: 0 auto;
+}
 
 .crrnt-currency {
   background: #fff;
