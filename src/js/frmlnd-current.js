@@ -39,7 +39,6 @@
                 $(element).css('cursor','pointer');
                 $(element).click(function() {
                     showTooltip(element).then(function() {
-
                         setTimeout(function() {
                             $('body').click(function() {
                                 hideTooltip();
