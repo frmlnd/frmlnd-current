@@ -79,6 +79,7 @@ body {
   margin: 0 auto;
   text-align: center;
   position: relative;
+  margin-bottom: 100px;
 }
 .page h1 {
   margin: 100px 0 0;
@@ -101,9 +102,20 @@ body {
 .page p {
   border-collapse: separate;
   line-height: 1.8;
+  max-width: 85%;
+  margin: 0 auto;
 }
 .page p .cite {
   font-size: .8em;
+}
+.page hr {
+  border: 0;
+  border-top: 1px dotted #fff;
+  width: 90%;
+  margin: 2em auto;
+}
+.page .gist {
+  margin-top: 2em;
 }
 
 .crrnt-currency {

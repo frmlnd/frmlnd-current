@@ -8,10 +8,10 @@
 	  	<meta name="description" content="Current.js - A realtime jQuery currency conversion plugin">
 	  	<meta name="author" content="Adam Penly for FRMLND - adam@fmlnd.com">
 	
-	  	<link rel="stylesheet" type="text/css" href="css/frmlnd-current.min.css">
-	  	<link rel="stylesheet" href="css/app.min.css">
+	  	<link rel="stylesheet" type="text/css" href="src/css/frmlnd-current.min.css">
+	  	<link rel="stylesheet" href="src/css/app.min.css">
 	  	
-		<script type="text/javascript" src="js/modernizr.js"></script>
+		<script type="text/javascript" src="src/js/modernizr.js"></script>
 	</head>
 
 	<body>
@@ -26,17 +26,17 @@
 			<p>
 				Current leverages the <a href="https://openexchangerates.org" target="_blank">Open Exchange Rates API</a> to create an ultra-lightweight, simple currency conversion display tool that's easy to use with your web application. The Open Exchange Rates API requires an API key, which you can procure <a href="https://openexchangerates.org/signup" target="_blank">here</a>.
 			</p>
-			<p>&nbsp;</p>
+			<hr>
 			<p>
 				Show conversions on hover: <span class="crrnt-currency">$100.63</span>
 			</p>
-			<p>&nbsp;</p>
+			<hr>
 			<p>
-				Or on click: <span class="crrnt-currency click">$5.29</span>
+				&hellip;or on click: <span class="crrnt-currency click">$5.29</span>
 			</p>
-			<p>&nbsp;</p>
+			<hr>
 			<p>
-				Set base and currency criteria directly from your markup: <span class="crrnt-currency" data-crrnt-base="USD" data-crrnt-currencies="HKD,IRR">$99.99</span><br>
+				Set base and currency criteria directly from your markup: <span class="crrnt-currency" data-crrnt-base="USD" data-crrnt-currencies="HKD,IRR">$99.99</span>
 				<script src="https://gist.github.com/frmlnd/e9ea1dae72030e24bbfc.js"></script>
 			</p>
 		</div>
@@ -46,8 +46,8 @@
 		</footer>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
-    	<script>window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>')</script>
-  		<script type="text/javascript" src="js/frmlnd-current.min.js"></script>
+    	<script>window.jQuery || document.write('<script src="src/js/jquery.min.js">\x3C/script>')</script>
+  		<script type="text/javascript" src="src/js/frmlnd-current.min.js"></script>
   		
   		<script type="text/javascript">
   		$(document).ready(function() {

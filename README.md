@@ -34,13 +34,13 @@ $(document).ready(function() {
 ### Options
 
 * **api** (string): The URI of the Open Exchange Rates API, with your API key. There is intentionally no default for this, because technically the plugin will work with other APIs as long as they return the correct JSON structure. For a free, keyless, but less all-encapsulating option - try [http://fixer.io/](http://fixer.io/).
-* **base** (string): The base currency the the plugin will use to calculate all other currency amounts.
-* **currencies** (Array): An array of currencies that Current should return to the UI.
+* **base** (string): The base currency the the plugin will use to calculate all other currency amounts. Default: "USD".
+* **currencies** (Array): An array of currencies that Current should return to the UI. Default: ["EUR","AUD","JPY"].
 
 ### Examples
-The following code will use the U.S. Dollar as a base and return Euros, Australian Dollars, and Japanese Yen to the UI as a hover element.
+The following code will use the U.S. Dollar as a base and return Euros, Japanese Yen, and Chinese Yuan to the UI as a hover element.
 ```
-<span class="crrnt-currency" data-crrnt-base="USD" data-crrnt-currencies="EUR,AUD,JPY">$100.63</span>
+<span class="crrnt-currency" data-crrnt-base="USD" data-crrnt-currencies="EUR,JPY,CNY">$100.63</span>
 ```
 
 The following code will use the Iranian Rial as a base and return Euros to the UI onClick.

@@ -18,6 +18,7 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
+	margin-bottom: 100px;
 	h1 {
 		margin: 100px 0 0;
 		font-size: 36px;
@@ -33,15 +34,26 @@ body {
 		font-weight: 500;
 		margin-bottom: 2em;
 		a {
-			border-bottom: 1px dotted #fff;
+			border-bottom: 1px dotted $white;
 		}
 	}
 	p {
 		border-collapse: separate;
 		line-height: 1.8;
+		max-width: 85%;
+		margin: 0 auto;
 		.cite {
 			font-size: .8em;
 		}
+	}
+	hr {
+		border: 0;
+		border-top: 1px dotted $white;
+		width: 90%;
+		margin: 2em auto;
+	}
+	.gist {
+		margin-top: 2em;
 	}
 }
 

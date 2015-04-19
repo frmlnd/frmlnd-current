@@ -8,12 +8,12 @@
         
         // Plugin default settings
         settings = $.extend({
-            api: '',
+            api: null,
             base: 'USD',
             currencies: [
                 'EUR',
-                'AUD',
-                'JPY'
+                'JPY',
+                'CNY'
             ]
         }, options);
 
@@ -107,7 +107,7 @@
             
             $(target).append(html);
 
-            $('.crrnt-tooltip').css('bottom', -(parseInt($('.crrnt-tooltip').css('bottom')) + $('.crrnt-tooltip').height()));
+            $('.crrnt-tooltip').css('top', -(parseInt($('.crrnt-tooltip').css('top')) + $('.crrnt-tooltip').height()));
 
         } else {
             $('.crrnt-tooltip').hide();
