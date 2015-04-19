@@ -1,2 +1,49 @@
 # frmlnd-current
-A tiny jQuery plugin that shows currency conversions on hover.
+**Easy currency conversions on the fly.
+
+## Dependencies
+bower install jquery#~1.11.2 --save-dev, or 
+[jQuery 1.x latest](http://jquery.com/download/)
+
+## Usage
+Include CSS and JS files:
+<header>
+```
+<link rel="stylesheet" type="text/css" href="css/frmlnd-current.min.css">
+```
+<body>
+```
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/frmlnd-current.min.js"></script>
+```
+Add a currency that need to be converted.
+```
+<span class="crrnt-currency">$100.63</span>
+```
+Call the plugin with your API URL:
+```
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.crrnt-currency').current({
+		api: 'http://openexchangerates.org/api/latest.json?app_id=[YOUR_API_KEY]'
+	});
+});	
+</script>
+```
+  		
+### Options
+
+* **api** (string): The URI of the Open Exchange Rates API, with your API key. There is intentionally no default for this, because technically the plugin will work with other APIs as long as they return the correct JSON structure. For a free, keyless, but less all-encapsulating option - try [http://fixer.io/](http://fixer.io/).
+* **base** (string): The base currency the the plugin will use to calculate all other currency amounts.
+* **currencies** (Array): An array of currencies that Current should return to the UI.
+
+### Examples
+The following code will use the U.S. Dollar as a base and return Euros, Australian Dollars, and Japanese Yen to the UI as a hover element.
+```
+<span class="crrnt-currency" data-crrnt-base="USD" data-crrnt-currencies="EUR,AUD,JPY">$100.63</span>
+```
+
+The following code will use the Iranian Rial as a base and return Euros to the UI onClick.
+```
+<span class="crrnt-currency click" data-crrnt-base="IRR" data-crrnt-currencies="EUR">﷼283,000</span>
+```

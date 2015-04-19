@@ -6,6 +6,7 @@
 a {
   text-decoration: none;
   color: #fff;
+  border-bottom: 1px dotted #fff;
 }
 
 button {
@@ -27,6 +28,37 @@ button[disabled] {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+code {
+  display: block;
+  margin: 20px;
+  background: #000;
+  border-top: 3px solid #ccc;
+  padding: 30px;
+  font-size: .8em;
+  font-family: 'Courier New', serif;
+  color: #fff;
+}
+
+.gist .gist-meta {
+  text-align: left;
+}
+
+footer {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  color: #267F26;
+  font-size: 0.8em;
+  line-height: 3;
+  text-align: center;
+}
+footer a {
+  color: #267F26;
+  border-bottom: 1px dotted #267F26;
+  font-weight: 500;
 }
 
 html, body {
@@ -57,15 +89,35 @@ body {
 }
 .page h1 a {
   color: #fff;
+  border-bottom: 0;
 }
 .page h2 {
   font-weight: 500;
+  margin-bottom: 2em;
 }
 .page h2 a {
   border-bottom: 1px dotted #fff;
 }
+.page p {
+  border-collapse: separate;
+  line-height: 1.8;
+}
 .page p .cite {
   font-size: .8em;
+}
+
+.crrnt-currency {
+  background: #fff;
+  color: #267F26;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.crrnt-tooltip {
+  background: #ccc;
+  color: #267F26;
+  border: 1px solid #999;
 }
 
 /*# sourceMappingURL=app.css.map */

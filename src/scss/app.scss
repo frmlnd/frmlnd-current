@@ -26,18 +26,35 @@ body {
 		text-align: center;
 		a {
 			color: $white;
+			border-bottom: 0;
 		}
 	}
 	h2 {
 		font-weight: 500;
+		margin-bottom: 2em;
 		a {
 			border-bottom: 1px dotted #fff;
 		}
 	}
 	p {
+		border-collapse: separate;
+		line-height: 1.8;
 		.cite {
 			font-size: .8em;
 		}
 	}
+}
 
+.crrnt-currency {
+	background: $white;
+	color: $green-med;
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-weight: 500;
+}
+
+.crrnt-tooltip {
+	background: $gray-light;
+	color: $green-med;
+	border: 1px solid $gray-med;
 }

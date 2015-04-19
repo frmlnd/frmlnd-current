@@ -65,25 +65,16 @@ gulp.task('concatcompress', function() {
 
     var license = '/**\n  ' +
                   '* frmlnd-current\n  ' +
-                  '* A tiny jQuery plugin that shows currency conversions on hover.\n  ' +
+                  '* A super lightweight currency conversion tool.\n  ' +
                   '* @version ' + p.version + '\n  ' + 
                   '* @author Adam Penly <apenly@gmail.com>\n  ' + 
                   '* @link https://github.com/frmlnd/frmlnd-current\n  ' +
                   '* @license MIT License, http://www.opensource.org/licenses/MIT\n  */\n\n';
 
-    gulp.src([
-        './src/js/app.js', 
-        './src/js/controllers/*.js', 
-        './src/js/directives/*.js', 
-        './src/js/services/*.js', 
-        './src/js/filters/*.js'
-    ])
+    gulp.src(['./src/js/frmlnd-current.js'])
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(concat('frmlnd-grass.js'))  
-        .pipe(insert.prepend(license))
-        .pipe(gulp.dest('./src/js'))
-        .pipe(rename('frmlnd-grass.min.js'))
+        .pipe(rename('frmlnd-current.min.js'))
         .pipe(sourcemaps.write())
         .pipe(uglify())
         .pipe(insert.prepend(license))
@@ -106,5 +97,5 @@ gulp.task('dist', function() {
         .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task( 'default', ['connect', 'copy', 'sass', 'concatcompress', 'watch'] );
+gulp.task( 'default', ['connect', 'copy', 'sass', 'watch'] );
 gulp.task( 'build', ['copy', 'sass', 'concatcompress', 'dist']  );
