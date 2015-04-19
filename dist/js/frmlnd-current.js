@@ -26,7 +26,7 @@
             
             return $(this).each(function() {
 
-                $(this).addClass('currentJS-base');
+                $(this).addClass('frmlnd-current-base');
                 
                 // Set hover behaviors for our currency elements
                 $(this).hover(
@@ -34,8 +34,6 @@
                     // Hover over
                     function() {
 
-                        console.log('here');
-                        
                         var html = $('<span />', { 
                             class: 'frmlnd-current-tooltip'
                         }).insertAfter($(this));
@@ -83,6 +81,7 @@
 
     function getRate(base, code) {
     	
+        console.log(base + ': ' + code);
     	if (current.rates[base] == 1) {
     		return current.rates[code];
     	} else {
