@@ -5,6 +5,7 @@
 a {
 	text-decoration: none;
 	color: $white;
+	border-bottom: 1px dotted $white;
 }
 
 button {
@@ -26,4 +27,35 @@ button {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
 	display: none !important;
+}
+
+code {
+	display: block;
+	margin: 20px;
+	background: $black;
+	border-top: 3px solid $gray-light;
+	padding: 30px;
+	font-size: .8em;
+	font-family: 'Courier New', serif;
+	color: $white;
+}
+
+.gist .gist-meta {
+	text-align: left;
+}
+
+footer {
+	width: 100%;
+	background: $white;
+	position: fixed;
+	bottom: 0;
+	color: $green-med;
+	font-size: 0.8em;
+	line-height: 3;
+	text-align: center;
+	a {
+		color: $green-med;
+		border-bottom: 1px dotted $green-med;
+		font-weight: 500;
+	}
 }

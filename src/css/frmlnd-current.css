@@ -1,15 +1,19 @@
-.frmlnd-current-tooltip {
+.crrnt-tooltip {
+  bottom: 7px;
+  left: 20px;
   position: absolute;
   display: inline-block;
   padding: 5px;
-  background: #e2e2e2;
-  border: solid 1px #ccc;
   border-radius: 5px;
-  color: #4A6F7F;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  font-size: 0.8em;
+  z-index: 1001;
 }
 
-.frmlnd-current-line {
-  line-height: 1.4em;
+.crrnt-line {
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=frmlnd-current.css.map */

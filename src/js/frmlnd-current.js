@@ -1,87 +1,129 @@
 (function ($) {
  
-    var exchangeRatesUrl = 'http://api.fixer.io/latest';
+    //var exchangeRatesUrl = 'http://api.fixer.io/latest';
 	var current;
-	
-    $.getJSON(exchangeRatesUrl)
-        .done(function(json) {
-            current = json;
-            current.rates[current.base] = 1;
-        })
-        .fail(function(jqxhr, textStatus, error) {
-            console.log('ERROR: ' + error);
-        });
+    var settings;
 
-        $.fn.current = function(options) {
-            
-            // Plugin default settings
-            var settings = $.extend({
-                base: "USD",
-                currencies: [
-                    'EUR',
-                    'AUD',
-                    'JPY'
-                ]
-            }, options);
-            
-            return $(this).each(function() {
+    $.fn.current = function(options) {
+        
+        // Plugin default settings
+        settings = $.extend({
+            api: '',
+            base: 'USD',
+            currencies: [
+                'EUR',
+                'AUD',
+                'JPY'
+            ]
+        }, options);
 
-                $(this).addClass('frmlnd-current-base');
-                
+        if (!current) {
+            $.getJSON(settings.api)
+                .done(function(json) {
+                    current = json;
+                    current.rates[current.base] = 1;
+                })
+                .fail(function(jqxhr, textStatus, error) {
+                    console.log('ERROR: ' + error);
+                });
+        }
+        
+        return $(this).each(function() {
+
+            var element = this;
+
+            $(element).addClass('crrnt-base');
+            
+            if ($(element).hasClass('click')) {
+
+                $(element).css('cursor','pointer');
+                $(element).click(function() {
+                    showTooltip(element).then(function() {
+
+                        setTimeout(function() {
+                            $('body').click(function() {
+                                hideTooltip();
+                                $(this).unbind('click');
+                            });
+                        }, 500);
+                    });
+                });
+
+            } else {
+
                 // Set hover behaviors for our currency elements
-                $(this).hover(
+                $(element).hover(
 
                     // Hover over
                     function() {
-
-                        var html = $('<span />', { 
-                            class: 'frmlnd-current-tooltip'
-                        }).insertAfter($(this));
-                        
-                        // Parse the currency into a decimal
-                        var amount = Number($(this).text().replace(/[^0-9\.]+/g,""));
-                        
-                        // Make sure we don't have a parse error 
-                        if (amount != 'NaN' && amount != 'undefined') {
-                            
-                            var currencyCodes = ($(this).data('currencies') !== undefined) ? $(this).data('currencies').split(',') : settings.currencies;
-
-                            // Loop through selected currency codes and grab the rates 
-                            for (var i=0; i<currencyCodes.length; i++) {
-
-                                var base = ($(this).data('base') !== undefined) ? $(this).data('base') : settings.base;
-
-                                var code = currencyCodes[i];
-                                var rate = getRate(base, code);
-
-                                var newAmount = ((amount * rate) * 10) / 10;
-                                var temp = parseFloat(newAmount).toFixed(4);
-                                var partArray = temp.toString().split("."); 
-                                partArray[0] = partArray[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); 
-                                
-                                var line = $('<span />', {
-                                    class: 'frmlnd-current-line'
-                                }).html(getCurrencySymbol(code) + partArray.join(".") + ' ' + code + '<br>').appendTo(html);
-                            }
-                            
-                            $(this).after(html);
-                            
-                        } else {
-                            $('.frmlnd-current-tooltip').hide();
-                        }
+                        hideTooltip();
+                        $(element).css('cursor','help');
+                        showTooltip(element);
                     },
                     
                     // Hover out
                     function() {
-                        $('.frmlnd-current-tooltip').remove();
+                        hideTooltip();
                     }
                 );
-            });
-        };
+            }
+        });
+    };
+
+    function showTooltip(target) {
+        var deferred = new $.Deferred();
+
+        $(target).css('position', 'relative');
+
+        var html = $('<span />', { 
+            class: 'crrnt-tooltip'
+        }).insertAfter($(target));
+        
+        // Parse the currency into a decimal
+        var amount = Number($(target).text().replace(/[^0-9\.]+/g,""));
+        
+        // Make sure we don't have a parse error 
+        if (amount != 'NaN' && amount != 'undefined') {
+            
+            var currencyCodes = ($(target).data('crrnt-currencies') !== undefined) ? $(target).data('crrnt-currencies').split(',') : settings.currencies;
+
+            // Loop through selected currency codes and grab the rates 
+            for (var i=0; i<currencyCodes.length; i++) {
+
+                var base = ($(target).data('crrnt-base') !== undefined) ? $(target).data('crrnt-base') : settings.base;
+
+                var code = currencyCodes[i];
+                var rate = getRate(base, code);
+
+                var newAmount = ((amount * rate) * 10) / 10;
+                var temp = parseFloat(newAmount).toFixed(4);
+                var partArray = temp.toString().split("."); 
+                partArray[0] = partArray[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); 
+                
+                var line = $('<span />', {
+                    class: 'crrnt-line'
+                }).html(getCurrencySymbol(code) + partArray.join(".") + ' ' + code + '<br>').appendTo(html);
+            }
+            
+            $(target).append(html);
+
+            $('.crrnt-tooltip').css('bottom', -(parseInt($('.crrnt-tooltip').css('bottom')) + $('.crrnt-tooltip').height()));
+
+        } else {
+            $('.crrnt-tooltip').hide();
+        }
+
+        deferred.resolve();
+
+        return deferred.promise();
+    }
+
+    function hideTooltip() { 
+        $('.crrnt-tooltip').remove();
+    }
 
     function getRate(base, code) {
     	
-        console.log(base + ': ' + code);
     	if (current.rates[base] == 1) {
     		return current.rates[code];
     	} else {
@@ -262,7 +304,7 @@
     		XDR: "SDRs",
     		XOF: "&#36;",
     		XPF: "F",
-    		YER: "rial",
+    		YER: "&#65020;",
     		ZAR: "R",
     		ZMK: "ZK",
     		ZMW: "ZMK",
