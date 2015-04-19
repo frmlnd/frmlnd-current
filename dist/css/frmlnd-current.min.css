@@ -1,1 +1,1 @@
-.frmlnd-current-tooltip{position:absolute;display:inline-block;padding:5px;background:#e2e2e2;border:1px solid #ccc;border-radius:5px}.frmlnd-current-line{line-height:1.4em}
+.crrnt-tooltip{top:7px;left:20px;position:absolute;display:inline-block;padding:5px;border-radius:5px;background:#fff;color:#333;border:1px solid #ccc;font-size:.8em;z-index:1001}.crrnt-line{white-space:nowrap}
