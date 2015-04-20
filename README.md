@@ -7,7 +7,7 @@ bower install jquery#~1.11.2 --save-dev,
 or [jQuery 1.x latest](http://jquery.com/download/)
 
 **Open Exchange Rates API**  
-Current leverages the <a href="https://openexchangerates.org" target="_blank">Open Exchange Rates API</a> to create an ultra-lightweight, simple currency conversion display tool that's easy to use with your web application. The Open Exchange Rates API requires an API key, which you can procure <a href="https://openexchangerates.org/signup" target="_blank">here</a>
+Current leverages the <a href="https://openexchangerates.org" target="_blank">Open Exchange Rates API</a> to create an ultra-lightweight, simple currency conversion display tool that's easy to use with your web application. The Open Exchange Rates API requires an API key, which you can procure <a href="https://openexchangerates.org/signup" target="_blank">here</a>.
 
 ## Usage
 Include CSS and JS files:
