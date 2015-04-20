@@ -8,11 +8,11 @@
 	  	<meta name="description" content="Current.js - A realtime jQuery currency conversion plugin">
 	  	<meta name="author" content="Adam Penly for FRMLND - adam@fmlnd.com">
 	
+		<link href='//fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700' rel='stylesheet' type='text/css'>
+
 	  	<link rel="stylesheet" type="text/css" href="src/css/frmlnd-current.min.css">
 	  	<link rel="stylesheet" href="src/css/app.min.css">
 	  	
-		<script type="text/javascript" src="src/js/modernizr.js"></script>
-
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -48,7 +48,7 @@
 			<hr>
 			<p>
 				Set base and currency criteria directly from your markup: <span class="crrnt-currency" data-crrnt-base="USD" data-crrnt-currencies="HKD,IRR">$99.99</span>
-				<script src="https://gist.github.com/frmlnd/e9ea1dae72030e24bbfc.js"></script>
+				<script src="//gist.github.com/frmlnd/e9ea1dae72030e24bbfc.js"></script>
 			</p>
 			<hr>
 			<p>
@@ -67,7 +67,7 @@
   		<script type="text/javascript">
   		$(document).ready(function() {
   	  		$('.crrnt-currency').current({
-  	  			api: 'http://openexchangerates.org/api/latest.json?app_id=b475c008178e43f2826a2d69bd4afff8'
+  	  			api: '//openexchangerates.org/api/latest.json?app_id=b475c008178e43f2826a2d69bd4afff8'
   	  		});
   		});	
   		</script>
