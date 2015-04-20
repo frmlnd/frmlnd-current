@@ -2,8 +2,8 @@
 **Easy currency conversions on the fly.
 
 ## Dependencies
-bower install jquery#~1.11.2 --save-dev, or  
-[jQuery 1.x latest](http://jquery.com/download/)
+bower install jquery#~1.11.2 --save-dev,  
+or [jQuery 1.x latest](http://jquery.com/download/)
 
 ## Usage
 Include CSS and JS files:
