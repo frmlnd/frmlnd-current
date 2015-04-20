@@ -1,5 +1,5 @@
 # frmlnd-current
-**Easy currency conversions on the fly.
+**Easy currency conversions on the fly.**
 
 ## Dependencies
 bower install jquery#~1.11.2 --save-dev,  
