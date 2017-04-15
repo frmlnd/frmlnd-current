@@ -11,12 +11,10 @@ Current leverages the <a href="https://openexchangerates.org" target="_blank">Op
 
 ## Usage
 Include CSS and JS files:
+```
 <header>
-```
 <link rel="stylesheet" type="text/css" href="css/frmlnd-current.min.css">
-```
 <body>
-```
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/frmlnd-current.min.js"></script>
 ```
