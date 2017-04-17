@@ -92,10 +92,13 @@ gulp.task('dist', function() {
     gulp.src(sources.bower_js)
         .pipe(plumber())
         .pipe(gulp.dest('./dist/js'));
+    gulp.src(sources.bower_js)
+        .pipe(plumber())
+        .pipe(gulp.dest('./dist/js'));
     gulp.src(['./src/js/**/frmlnd-*.*'])
         .pipe(plumber())
         .pipe(gulp.dest('./dist/js'));
-    gulp.src(['./src/css/**/frmlnd-*.*'])
+    gulp.src(['./src/css/**/*.*'])
         .pipe(plumber())
         .pipe(gulp.dest('./dist/css'));
 });
