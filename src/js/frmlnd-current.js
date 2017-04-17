@@ -41,7 +41,7 @@
                 $(element).click(function() {
                     showTooltip(element).then(function() {
                         setTimeout(function() {
-                            $('body').click(function() {
+                            $('body').click(function(e) {
                                 hideTooltip();
                                 $(this).unbind('click');
                             });
@@ -139,6 +139,7 @@
 
         // Parse the currency into a decimal
         amount = Number($(target).text().replace(/[^0-9\.]+/g,""));
+		console.log($(target));
 
 		// Make sure we don't have a parse error 
         if (amount != 'NaN' && amount != 'undefined') {
