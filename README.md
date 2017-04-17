@@ -3,7 +3,8 @@
 
 ## Dependencies
 **jQuery**  
-I'm using the following, but Current has been tested with jQuery 1.x as well, specifically 1.11.2.
+I'm using the following, but Current has been tested with jQuery 1.x as well, specifically 1.11.2:
+
 bower install jquery#3.2.1 --save,  
 or [jQuery 3.x latest](http://jquery.com/download/)
 
