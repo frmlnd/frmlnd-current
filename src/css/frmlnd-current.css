@@ -9,11 +9,7 @@
   color: #333;
   border: 1px solid #ccc;
   font-size: 0.8em;
-  z-index: 1001;
-}
+  z-index: 1001; }
 
 .crrnt-line {
-  white-space: nowrap;
-}
-
-/*# sourceMappingURL=frmlnd-current.css.map */
+  white-space: nowrap; }

@@ -3,7 +3,7 @@
 var p = require('./package.json')
 
 var gulp = require('gulp'),
-    sass = require('gulp-ruby-sass');
+    sass = require('gulp-sass'),
     connect = require('gulp-connect'),
     concat = require('gulp-concat'),
     minifycss = require('gulp-minify-css'),
@@ -26,7 +26,7 @@ var sources = {
 };
 
 gulp.task('sass', function(){
-    gulp.src(sources.sass)
+    return gulp.src(sources.sass)
         .pipe(plumber())
         .pipe(sass({style: 'expanded'}))
         .pipe(gulp.dest('./src/css'))

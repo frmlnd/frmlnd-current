@@ -55,11 +55,13 @@ body {
 }
 
 .crrnt-currency {
+	display: inline-block;
 	background: $white;
 	color: $green-med;
 	padding: 5px 10px;
 	border-radius: 3px;
 	font-weight: 500;
+	margin: 0 5px;
 }
 
 .crrnt-tooltip {
