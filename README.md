@@ -2,9 +2,10 @@
 **Easy currency conversions on the fly.**
 
 ## Dependencies
-**jQuery 1.x**  
-bower install jquery#~1.11.2 --save-dev,  
-or [jQuery 1.x latest](http://jquery.com/download/)
+**jQuery**  
+I'm using the following, but Current has been tested with jQuery 1.x as well, specifically 1.11.2.
+bower install jquery#3.2.1 --save,  
+or [jQuery 3.x latest](http://jquery.com/download/)
 
 **Open Exchange Rates API**  
 Current leverages the <a href="https://openexchangerates.org" target="_blank">Open Exchange Rates API</a> to create an ultra-lightweight, simple currency conversion display tool that's easy to use with your web application. The Open Exchange Rates API requires an API key, which you can procure <a href="https://openexchangerates.org/signup" target="_blank">here</a>.

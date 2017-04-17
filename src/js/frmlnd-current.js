@@ -23,7 +23,6 @@
                 .done(function(json) {
                     current = json;
                     current.rates[current.base] = 1;
-					console.log(current);
                 })
                 .fail(function(jqxhr, textStatus, error) {
                     console.log('ERROR: ' + error);
@@ -88,60 +87,36 @@
 
     function showTooltip(target) {
         var deferred = new $.Deferred(),
-			amount = null,
 			html = '',
-			currencyCodes,
-			base = '',
-			code = '',
-			rate = 0,
-			newAmount = 0,
-			temp = 0,
-			partArray = null,
+			conversions = getConversions(target),
+			numConversions = 0,
 			line = '';
 
+		conversions.then(function(data) {
+			$(target).css('position', 'relative');
 
-        $(target).css('position', 'relative');
+			html = $('<span />', { 
+				class: 'crrnt-tooltip'
+			}).insertAfter($(target));
 
-        html = $('<span />', { 
-            class: 'crrnt-tooltip'
-        }).insertAfter($(target));
-        
-        // Parse the currency into a decimal
-        amount = Number($(target).text().replace(/[^0-9\.]+/g,""));
-        
-        // Make sure we don't have a parse error 
-        if (amount != 'NaN' && amount != 'undefined') {
-            
-            currencyCodes = ($(target).data('crrnt-currencies') !== undefined) ? 
-				$(target).data('crrnt-currencies').split(',') : settings.currencies;
+			numConversions = data.length;
+			if (data && numConversions > 0) {
+				for (var i=0; i<numConversions; i++) {
 
-            // Loop through selected currency codes and grab the rates 
-            for (var i=0; i<currencyCodes.length; i++) {
+					line = $('<span />', {
+						class: 'crrnt-line'
+					}).html(data[i] + '<br>').appendTo(html);
+				}
 
-                base = ($(target).data('crrnt-base') !== undefined) ? $(target).data('crrnt-base') : settings.base;
+				$(target).append(html);
+				$('.crrnt-tooltip').css('top', -(parseInt($('.crrnt-tooltip').css('top')) + $('.crrnt-tooltip').height()));        
 
-                code = currencyCodes[i];
-                rate = getRate(base, code);
-
-                newAmount = ((amount * rate) * 10) / 10;
-                temp = parseFloat(newAmount).toFixed(settings.accuracy);
-                partArray = temp.toString().split("."); 
-                partArray[0] = partArray[0].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); 
-
-                line = $('<span />', {
-                    class: 'crrnt-line'
-                }).html(getCurrencySymbol(code) + partArray.join(".") + ' ' + code + '<br>').appendTo(html);
-            }
-            
-            $(target).append(html);
-
-            $('.crrnt-tooltip').css('top', -(parseInt($('.crrnt-tooltip').css('top')) + $('.crrnt-tooltip').height()));
-
-        } else {
-            $('.crrnt-tooltip').hide();
-        }
-
-        deferred.resolve();
+				deferred.resolve();
+			
+			} else {
+				$('.crrnt-tooltip').hide();
+			}
+		});
 
         return deferred.promise();
     }

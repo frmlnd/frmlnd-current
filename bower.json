@@ -8,7 +8,9 @@
   "description": "A tiny jQuery plugin that shows currency conversions on hover.",
   "license": "MIT",
   "devDependencies": {
-    "jquery": "1.11.2",
     "modernizr": "~2.8.3"
+  },
+  "dependencies": {
+    "jquery": "3.2.1"
   }
 }
