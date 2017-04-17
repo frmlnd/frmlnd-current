@@ -20,7 +20,7 @@ var sources = {
     js: ['./src/**/*.js'],
     bower_js: [
         './bower_components/jquery/dist/jquery.min.js',
-        './bower_components/jquery/jquery.min.map',
+        './bower_components/jquery/dist/jquery.min.map',
         './bower_components/modernizr/modernizr.js'
     ]
 };
@@ -89,6 +89,9 @@ gulp.task('watch', function(){
 });
 
 gulp.task('dist', function() {
+    gulp.src(sources.bower_js)
+        .pipe(plumber())
+        .pipe(gulp.dest('./dist/js'));
     gulp.src(['./src/js/**/frmlnd-*.*'])
         .pipe(plumber())
         .pipe(gulp.dest('./dist/js'));
