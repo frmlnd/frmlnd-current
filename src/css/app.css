@@ -1,12 +1,10 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 a {
   text-decoration: none;
   color: #fff;
-  border-bottom: 1px dotted #fff;
-}
+  border-bottom: 1px dotted #fff; }
 
 button {
   border: 0;
@@ -15,19 +13,15 @@ button {
   padding: 5px 20px;
   font-size: 1.2em;
   border-radius: 4px;
-  cursor: pointer;
-}
-button:hover {
-  background: #2c932c;
-}
-button[disabled] {
-  background: #999;
-  background: rgba(38, 127, 38, 0.2);
-}
+  cursor: pointer; }
+  button:hover {
+    background: #2c932c; }
+  button[disabled] {
+    background: #999;
+    background: rgba(38, 127, 38, 0.2); }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
+  display: none !important; }
 
 code {
   display: block;
@@ -37,16 +31,13 @@ code {
   padding: 30px;
   font-size: .8em;
   font-family: 'Courier New', serif;
-  color: #fff;
-}
+  color: #fff; }
 
 .gist {
-  margin-top: 2em;
-}
+  margin-top: 2em; }
 
 .gist .gist-meta {
-  text-align: left;
-}
+  text-align: left; }
 
 footer {
   width: 100%;
@@ -56,17 +47,14 @@ footer {
   color: #267F26;
   font-size: 0.8em;
   line-height: 3;
-  text-align: center;
-}
-footer a {
-  color: #267F26;
-  border-bottom: 1px dotted #267F26;
-  font-weight: 500;
-}
+  text-align: center; }
+  footer a {
+    color: #267F26;
+    border-bottom: 1px dotted #267F26;
+    font-weight: 500; }
 
 html, body {
-  width: 100%;
-}
+  width: 100%; }
 
 body {
   margin: 0;
@@ -74,62 +62,49 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
-  font: 400 16px/1.5 "Source Code Pro", Arial, Helvetica, sans-serif;
-}
+  font: 400 16px/1.5 "Source Code Pro", Arial, Helvetica, sans-serif; }
 
 .page {
   max-width: 80%;
   margin: 0 auto;
   text-align: center;
   position: relative;
-  margin-bottom: 100px;
-}
-.page h1 {
-  margin: 100px 0 0;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 1;
-  text-align: center;
-}
-.page h1 a {
-  color: #fff;
-  border-bottom: 0;
-}
-.page h2 {
-  font-weight: 500;
-  margin-bottom: 2em;
-}
-.page h2 a {
-  border-bottom: 1px dotted #fff;
-}
-.page p {
-  border-collapse: separate;
-  line-height: 1.8;
-  max-width: 85%;
-  margin: 0 auto;
-}
-.page p .cite {
-  font-size: .8em;
-}
-.page hr {
-  border: 0;
-  border-top: 1px dotted #fff;
-  width: 90%;
-  margin: 2em auto;
-}
+  margin-bottom: 100px; }
+  .page h1 {
+    margin: 100px 0 0;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center; }
+    .page h1 a {
+      color: #fff;
+      border-bottom: 0; }
+  .page h2 {
+    font-weight: 500;
+    margin-bottom: 2em; }
+    .page h2 a {
+      border-bottom: 1px dotted #fff; }
+  .page p {
+    border-collapse: separate;
+    line-height: 1.8;
+    max-width: 85%;
+    margin: 0 auto; }
+    .page p .cite {
+      font-size: .8em; }
+  .page hr {
+    border: 0;
+    border-top: 1px dotted #fff;
+    width: 90%;
+    margin: 2em auto; }
 
 .crrnt-currency {
   background: #fff;
   color: #267F26;
   padding: 5px 10px;
   border-radius: 3px;
-  font-weight: 500;
-}
+  font-weight: 500; }
 
 .crrnt-tooltip {
   background: #ccc;
   color: #267F26;
-  border: 1px solid #999;
-}
-
-/*# sourceMappingURL=app.css.map */
+  border: 1px solid #999; }
